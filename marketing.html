@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing | NetVault-Tactical</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <span class="mark">NetVault<span>-Tactical</span></span>
+  <button class="burger" onclick="toggleNav()">MENU</button>
+</div>
+
+<div class="shell">
+  <nav class="sidenav" id="sidenav">
+    <div class="brand">
+      <div class="mark">NetVault<span>-Tactical</span></div>
+      <div class="sub">Network Resilience System</div>
+    </div>
+    <ul class="navlist">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About the Creator</a></li>
+      <li><a href="prototype.html">Application Prototype</a></li>
+      <li><a href="marketing.html" class="active">Marketing</a></li>
+      <li><a href="guide.html">User Guide</a></li>
+    </ul>
+    <div class="navfoot"><span class="dot">●</span> SYSTEM STATUS: ONLINE</div>
+  </nav>
+
+  <main>
+    <div class="page">
+
+      <p class="eyebrow">Why NetVault-Tactical</p>
+      <h1 class="title">Core Benefits</h1>
+      <p class="lede">
+        Four reasons signal officers and network engineers choose NetVault-Tactical
+        for forward-deployed configuration management.
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h4>Mission Continuity</h4>
+          <p>
+            Replaces complex, manual recovery with one-click restoration. When a
+            device fails, operators push a verified, trusted configuration to
+            replacement hardware in minutes &mdash; not hours &mdash; keeping C2
+            services active without interruption.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Tactical Edge Operations</h4>
+          <p>
+            Built "local-first." Every backup lands on a ruggedized edge server for
+            immediate offline access. The Sync Daemon only pushes to the cloud when
+            bandwidth allows, so backups never compete with live mission traffic.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Cybersecurity Posture</h4>
+          <p>
+            Network configurations are a blueprint for adversary reconnaissance.
+            NetVault-Tactical enforces zero-trust authentication via ICAM and
+            protects every archive with AES-256-GCM encryption, at rest and in transit.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Operator Efficiency</h4>
+          <p>
+            Automates the tedious, error-prone task of manual configuration backup,
+            freeing technical staff to focus on complex, mission-critical work
+            instead of routine system maintenance.
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        "Losing a router used to mean a half-day of rebuilding configs from memory.
+        Now it's a five-minute restore."
+        <span class="quote-attrib">&mdash; Simulated user feedback, prototype testing phase</span>
+      </div>
+
+      <h2 class="section-head">Ready to See It in Action?</h2>
+      <div class="cta-banner">
+        <h3>Request a Demo</h3>
+        <p>
+          Tell us about your environment and we'll walk you through a live
+          NetVault-Tactical deployment scenario.
+        </p>
+        <a class="btn btn-primary" href="#" onclick="openModal('demoModal'); return false;">Request a Demo</a>
+      </div>
+
+      <footer class="sitefoot">
+        <span>NetVault-Tactical &copy; 2026 &mdash; Prototype Build NVT-1.0</span>
+        <span>UNCLASSIFIED // FOR OFFICIAL USE ONLY</span>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="demoModal">
+  <div class="modal-box">
+    <p>Placeholder: You will be redirected to a site where you can submit information to be contacted by our sales team.</p>
+    <a class="btn btn-primary" href="#" onclick="closeModal('demoModal'); return false;">Close</a>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

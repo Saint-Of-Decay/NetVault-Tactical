@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Guide | NetVault-Tactical</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <span class="mark">NetVault<span>-Tactical</span></span>
+  <button class="burger" onclick="toggleNav()">MENU</button>
+</div>
+
+<div class="shell">
+  <nav class="sidenav" id="sidenav">
+    <div class="brand">
+      <div class="mark">NetVault<span>-Tactical</span></div>
+      <div class="sub">Network Resilience System</div>
+    </div>
+    <ul class="navlist">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About the Creator</a></li>
+      <li><a href="prototype.html">Application Prototype</a></li>
+      <li><a href="marketing.html">Marketing</a></li>
+      <li><a href="guide.html" class="active">User Guide</a></li>
+    </ul>
+    <div class="navfoot"><span class="dot">●</span> SYSTEM STATUS: ONLINE</div>
+  </nav>
+
+  <main>
+    <div class="page">
+
+      <p class="eyebrow">Documentation</p>
+      <h1 class="title">User Guide Summary</h1>
+      <p class="lede">
+        An overview of the full NetVault-Tactical User Manual, covering installation,
+        operation, restoration, and maintenance.
+      </p>
+
+      <a class="btn btn-primary" href="#" onclick="openModal('downloadModal'); return false;">Download Full User Guide (PDF)</a>
+
+      <h2 class="section-head">What's Inside</h2>
+      <ul class="guide-toc">
+        <li>
+          <span class="sec-num">SEC 1&ndash;2</span>
+          <span class="sec-body">
+            <strong>Introduction &amp; Safety</strong>
+            <span>Purpose of the manual, system scope, and critical cybersecurity, physical security, and data handling warnings.</span>
+          </span>
+        </li>
+        <li>
+          <span class="sec-num">SEC 3</span>
+          <span class="sec-body">
+            <strong>Technical Specifications</strong>
+            <span>Exact hardware, software, and system requirements for deploying NetVault-Tactical.</span>
+          </span>
+        </li>
+        <li>
+          <span class="sec-num">SEC 4&ndash;6</span>
+          <span class="sec-body">
+            <strong>Installation &amp; Operation</strong>
+            <span>Step-by-step instructions for installation, initial configuration, registering network nodes, and backup schedules.</span>
+          </span>
+        </li>
+        <li>
+          <span class="sec-num">SEC 7</span>
+          <span class="sec-body">
+            <strong>Configuration Restoration</strong>
+            <span>Procedures for both standard (dashboard) and emergency (CLI) configuration restoration.</span>
+          </span>
+        </li>
+        <li>
+          <span class="sec-num">SEC 8</span>
+          <span class="sec-body">
+            <strong>Troubleshooting</strong>
+            <span>Common error codes (e.g., NVT-001, NVT-006) and their specific remediation steps.</span>
+          </span>
+        </li>
+        <li>
+          <span class="sec-num">SEC 9</span>
+          <span class="sec-body">
+            <strong>Maintenance</strong>
+            <span>Routine maintenance schedule, including daily checks, weekly log reviews, and 90-day key rotations.</span>
+          </span>
+        </li>
+      </ul>
+
+      <h2 class="section-head">Before You Begin</h2>
+      <div class="warn-box">
+        <span class="wlabel">WARNING</span>
+        <p>
+          NetVault-Tactical stores encrypted configuration data that may reveal network
+          topology. Zero-trust authentication (ICAM) must be enabled at every installation,
+          and TPM-backed encryption must never be disabled without authorization.
+        </p>
+      </div>
+      <div class="warn-box">
+        <span class="wlabel">CAUTION</span>
+        <p>
+          Restoration overwrites the current running configuration on the target device.
+          Confirm the target is a replacement unit, or that the current configuration can
+          be discarded, before restoring.
+        </p>
+      </div>
+
+      <h2 class="section-head">Quick Start</h2>
+      <ol class="plain">
+        <li>Confirm the host server meets the hardware and software requirements on the <a href="prototype.html">Application Prototype</a> page.</li>
+        <li>Install Docker Engine and enable TPM 2.0 in BIOS/UEFI.</li>
+        <li>Pull the container image and initialize the database and key store.</li>
+        <li>Start the application stack and access the dashboard at <code>https://&lt;server-ip&gt;:8443</code>.</li>
+        <li>Register your first network node and configure a backup schedule.</li>
+      </ol>
+      <p class="muted">Full step-by-step commands are included in the downloadable User Guide.</p>
+
+      <footer class="sitefoot">
+        <span>NetVault-Tactical &copy; 2026 &mdash; Prototype Build NVT-1.0</span>
+        <span>UNCLASSIFIED // FOR OFFICIAL USE ONLY</span>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<div class="modal-overlay" id="downloadModal">
+  <div class="modal-box">
+    <p>Placeholder: Your download has begun.</p>
+    <a class="btn btn-primary" href="#" onclick="closeModal('downloadModal'); return false;">Close</a>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

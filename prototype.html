@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Prototype | NetVault-Tactical</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <span class="mark">NetVault<span>-Tactical</span></span>
+  <button class="burger" onclick="toggleNav()">MENU</button>
+</div>
+
+<div class="shell">
+  <nav class="sidenav" id="sidenav">
+    <div class="brand">
+      <div class="mark">NetVault<span>-Tactical</span></div>
+      <div class="sub">Network Resilience System</div>
+    </div>
+    <ul class="navlist">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About the Creator</a></li>
+      <li><a href="prototype.html" class="active">Application Prototype</a></li>
+      <li><a href="marketing.html">Marketing</a></li>
+      <li><a href="guide.html">User Guide</a></li>
+    </ul>
+    <div class="navfoot"><span class="dot">●</span> SYSTEM STATUS: ONLINE</div>
+  </nav>
+
+  <main>
+    <div class="page">
+
+      <p class="eyebrow">Application Prototype</p>
+      <h1 class="title">How NetVault-Tactical Works</h1>
+      <p class="lede">
+        A look at the system architecture, components, and hardware/software
+        specifications behind the prototype.
+      </p>
+
+      <h2 class="section-head">System Architecture</h2>
+      <p>
+        NetVault-Tactical is composed of five core service components, each
+        containerized and independently deployable:
+      </p>
+
+      <div class="grid-2">
+        <div class="card">
+          <h4>Scheduler Engine</h4>
+          <p>Manages backup job queues, schedules, and event-driven triggers across all registered nodes.</p>
+        </div>
+        <div class="card">
+          <h4>Collection Agent</h4>
+          <p>Connects to network devices via SSH and SNMP to extract and normalize configuration data.</p>
+        </div>
+        <div class="card">
+          <h4>Encryption Worker</h4>
+          <p>Applies AES-256-GCM encryption to every backup archive and manages TPM-backed key storage.</p>
+        </div>
+        <div class="card">
+          <h4>Sync Daemon</h4>
+          <p>Monitors connectivity and pushes encrypted archives to the cloud (e.g., JWCC) when bandwidth permits.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top: 18px;">
+        <h4>Management Interface</h4>
+        <p>Web-based dashboard for node registration, job monitoring, restoration, and audit log review.</p>
+      </div>
+
+      <h2 class="section-head">Data Flow</h2>
+      <div class="hero-panel" style="margin-bottom: 8px;">
+        <div class="status-row"><span class="tag steel">[01]</span> Tactical network devices (routers, switches, SATCOM terminals)</div>
+        <div class="status-row"><span class="tag steel">[02]</span> Collection Agent pulls configuration via SSH / SNMP</div>
+        <div class="status-row"><span class="tag amber">[03]</span> Encryption Worker secures the archive (AES-256-GCM)</div>
+        <div class="status-row"><span class="tag">[04]</span> Stored on local edge server &mdash; available offline, immediately</div>
+        <div class="status-row"><span class="tag">[05]</span> Sync Daemon pushes to cloud (JWCC) when bandwidth allows</div>
+        <div class="status-row"><span class="tag amber">[06]</span> Operator restores via Management Interface in one click</div>
+      </div>
+
+      <h2 class="section-head">Technical Specifications</h2>
+      <table class="spec">
+        <tr><th>Component</th><th>Specification</th></tr>
+        <tr><td class="label">Processor / CPU</td><td class="value">Quad-core Intel Xeon / AMD EPYC (server-grade) or Intel Core i7 (12th Gen+)</td></tr>
+        <tr><td class="label">Memory / RAM</td><td class="value">16 GB minimum &middot; 32 GB DDR4 ECC recommended &middot; 64 GB for large deployments</td></tr>
+        <tr><td class="label">Storage</td><td class="value">2x 1 TB NVMe SSD in RAID-1 mirrored configuration</td></tr>
+        <tr><td class="label">Network Interface</td><td class="value">Dual Gigabit Ethernet NICs</td></tr>
+        <tr><td class="label">Security Module</td><td class="value">Trusted Platform Module (TPM 2.0)</td></tr>
+        <tr><td class="label">Power Supply</td><td class="value">Redundant PSUs + UPS with 30-minute runtime</td></tr>
+        <tr><td class="label">Chassis</td><td class="value">Rack-mounted or compact; MIL-STD-810 compliant preferred</td></tr>
+        <tr><td class="label">Operating System</td><td class="value">Ubuntu Server 22.04 LTS or RHEL 9 (STIG-hardened), kernel 5.15+</td></tr>
+        <tr><td class="label">Container Runtime</td><td class="value">Docker Engine 24.x or newer</td></tr>
+      </table>
+
+      <h3 class="sub-head">Supported Network Systems</h3>
+      <ul class="plain">
+        <li>Cisco (IOS, IOS-XE, NX-OS)</li>
+        <li>Juniper (Junos OS)</li>
+        <li>Palo Alto (PAN-OS)</li>
+        <li>SATCOM / RF gear &mdash; any generic SSH/SNMP-capable terminal</li>
+      </ul>
+
+      <footer class="sitefoot">
+        <span>NetVault-Tactical &copy; 2026 &mdash; Prototype Build NVT-1.0</span>
+        <span>UNCLASSIFIED // FOR OFFICIAL USE ONLY</span>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

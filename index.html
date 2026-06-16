@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NetVault-Tactical | Network Configuration Backup &amp; Recovery</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="mobile-bar">
+  <span class="mark">NetVault<span>-Tactical</span></span>
+  <button class="burger" onclick="toggleNav()">MENU</button>
+</div>
+
+<div class="shell">
+  <nav class="sidenav" id="sidenav">
+    <div class="brand">
+      <div class="mark">NetVault<span>-Tactical</span></div>
+      <div class="sub">Network Resilience System</div>
+    </div>
+    <ul class="navlist">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About the Creator</a></li>
+      <li><a href="prototype.html">Application Prototype</a></li>
+      <li><a href="marketing.html">Marketing</a></li>
+      <li><a href="guide.html">User Guide</a></li>
+    </ul>
+    <div class="navfoot"><span class="dot">●</span> SYSTEM STATUS: ONLINE</div>
+  </nav>
+
+  <main>
+    <div class="page">
+
+      <p class="eyebrow">Tactical Network Configuration Backup &amp; Recovery</p>
+      <h1 class="title">Automate. Secure.<br><em>Never lose your network.</em></h1>
+      <p class="lede">
+        NetVault-Tactical removes the human error from configuration management, so a
+        single device failure or cyber-attack never costs you your command-and-control network.
+      </p>
+
+      <div class="hero">
+        <div>
+          <p>
+            Built for forward-deployed units operating in disconnected, intermittent, and
+            limited (DIL) bandwidth environments, NetVault-Tactical automatically backs up
+            router, switch, and SATCOM terminal configurations &mdash; locally and to the cloud
+            &mdash; so reconstitution after a failure takes minutes, not hours.
+          </p>
+          <p class="muted">
+            Explore how it works on the <a href="prototype.html">Application Prototype</a> page,
+            or jump straight to the <a href="guide.html">User Guide</a> for setup instructions.
+          </p>
+          <div style="margin-top: 22px;">
+            <a class="btn btn-primary" href="marketing.html" onclick="return false;" id="learnMoreBtn">Learn More</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="readout-title">LIVE NODE STATUS &mdash; SAMPLE DEPLOYMENT</div>
+          <div class="readout-line"><span>RTR-FOB-ALPHA-01</span><span class="val">BACKED UP</span></div>
+          <div class="readout-line"><span>SW-FOB-ALPHA-02</span><span class="val">BACKED UP</span></div>
+          <div class="readout-line"><span>SATCOM-TERM-03</span><span class="val amber">SYNC PENDING</span></div>
+          <div class="readout-line"><span>RTR-FOB-BRAVO-01</span><span class="val">BACKED UP</span></div>
+          <div class="readout-line"><span>Last cloud sync</span><span class="val">04 MIN AGO</span></div>
+          <div class="readout-line"><span>Encryption</span><span class="val">AES-256-GCM</span></div>
+        </div>
+      </div>
+
+      <h2 class="section-head">Three Pillars of Network Resilience</h2>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="num">[ AUTOMATED ]</div>
+          <h4>Zero-Touch Backups</h4>
+          <p>
+            The Scheduler Engine runs routine and event-driven backups across every registered
+            node via SSH/SNMP &mdash; no operator intervention required.
+          </p>
+        </div>
+        <div class="pillar">
+          <div class="num">[ RESILIENT ]</div>
+          <h4>Dual-Storage Pipeline</h4>
+          <p>
+            Configurations are saved locally on ruggedized edge servers and synced to the
+            cloud only when bandwidth allows, preserving mission-critical capacity.
+          </p>
+        </div>
+        <div class="pillar">
+          <div class="num">[ RAPID ]</div>
+          <h4>One-Click Restoration</h4>
+          <p>
+            Push a verified configuration to replacement hardware in minutes, cutting
+            Mean Time To Recovery and keeping C2 nodes online.
+          </p>
+        </div>
+      </div>
+
+      <footer class="sitefoot">
+        <span>NetVault-Tactical &copy; 2026 &mdash; Prototype Build NVT-1.0</span>
+        <span>UNCLASSIFIED // FOR OFFICIAL USE ONLY</span>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<!-- "Learn More" demo modal, consistent with marketing page interaction -->
+<div class="modal-overlay" id="learnMoreModal">
+  <div class="modal-box">
+    <p>Redirecting you to the Marketing page to learn more about NetVault-Tactical&hellip;</p>
+    <a class="btn btn-primary" href="marketing.html">Continue</a>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+<script>
+  document.getElementById('learnMoreBtn').addEventListener('click', function(e){
+    e.preventDefault();
+    window.location.href = 'marketing.html';
+  });
+</script>
+</body>
+</html>
