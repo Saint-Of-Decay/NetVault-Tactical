@@ -7,15 +7,14 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
 <div class="mobile-bar">
-  <span class="mark">NetVault<span>-Tactical</span></span>
+  <span class="mark"><img src="assets/logo-mark.png" alt="" class="logo-mark">NetVault<span>-Tactical</span></span>
   <button class="burger" onclick="toggleNav()">MENU</button>
 </div>
-
 <div class="shell">
   <nav class="sidenav" id="sidenav">
     <div class="brand">
+      <img src="assets/logo-mark.png" alt="NetVault-Tactical shield logo" class="logo-mark">
       <div class="mark">NetVault<span>-Tactical</span></div>
       <div class="sub">Network Resilience System</div>
     </div>
@@ -28,17 +27,14 @@
     </ul>
     <div class="navfoot"><span class="dot">●</span> SYSTEM STATUS: ONLINE</div>
   </nav>
-
   <main>
     <div class="page">
-
       <p class="eyebrow">Tactical Network Configuration Backup &amp; Recovery</p>
       <h1 class="title">Automate. Secure.<br><em>Never lose your network.</em></h1>
       <p class="lede">
         NetVault-Tactical removes the human error from configuration management, so a
         single device failure or cyber-attack never costs you your command-and-control network.
       </p>
-
       <div class="hero">
         <div>
           <p>
@@ -55,7 +51,6 @@
             <a class="btn btn-primary" href="marketing.html" onclick="return false;" id="learnMoreBtn">Learn More</a>
           </div>
         </div>
-
         <div class="hero-panel">
           <div class="readout-title">LIVE NODE STATUS &mdash; SAMPLE DEPLOYMENT</div>
           <div class="readout-line"><span>RTR-FOB-ALPHA-01</span><span class="val">BACKED UP</span></div>
@@ -66,7 +61,6 @@
           <div class="readout-line"><span>Encryption</span><span class="val">AES-256-GCM</span></div>
         </div>
       </div>
-
       <h2 class="section-head">Three Pillars of Network Resilience</h2>
       <div class="pillars">
         <div class="pillar">
@@ -94,23 +88,19 @@
           </p>
         </div>
       </div>
-
       <footer class="sitefoot">
-        <span>NetVault-Tactical &copy; 2026 &mdash; Prototype Build NVT-1.0</span>
+        <span>NetVault-Tactical &copy; 2026</span>
         <span>UNCLASSIFIED // FOR OFFICIAL USE ONLY</span>
       </footer>
     </div>
   </main>
 </div>
-
-<!-- "Learn More" demo modal, consistent with marketing page interaction -->
 <div class="modal-overlay" id="learnMoreModal">
   <div class="modal-box">
     <p>Redirecting you to the Marketing page to learn more about NetVault-Tactical&hellip;</p>
     <a class="btn btn-primary" href="marketing.html">Continue</a>
   </div>
 </div>
-
 <script src="assets/site.js"></script>
 <script>
   document.getElementById('learnMoreBtn').addEventListener('click', function(e){
