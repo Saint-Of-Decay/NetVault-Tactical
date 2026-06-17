@@ -7,15 +7,14 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
 <div class="mobile-bar">
-  <span class="mark">NetVault<span>-Tactical</span></span>
+  <span class="mark"><img src="assets/logo-mark.png" alt="" class="logo-mark">NetVault<span>-Tactical</span></span>
   <button class="burger" onclick="toggleNav()">MENU</button>
 </div>
-
 <div class="shell">
   <nav class="sidenav" id="sidenav">
     <div class="brand">
+      <img src="assets/logo-mark.png" alt="NetVault-Tactical shield logo" class="logo-mark">
       <div class="mark">NetVault<span>-Tactical</span></div>
       <div class="sub">Network Resilience System</div>
     </div>
@@ -28,23 +27,19 @@
     </ul>
     <div class="navfoot"><span class="dot">●</span> SYSTEM STATUS: ONLINE</div>
   </nav>
-
   <main>
     <div class="page">
-
       <p class="eyebrow">Application Prototype</p>
       <h1 class="title">How NetVault-Tactical Works</h1>
       <p class="lede">
         A look at the system architecture, components, and hardware/software
         specifications behind the prototype.
       </p>
-
       <h2 class="section-head">System Architecture</h2>
       <p>
         NetVault-Tactical is composed of five core service components, each
         containerized and independently deployable:
       </p>
-
       <div class="grid-2">
         <div class="card">
           <h4>Scheduler Engine</h4>
@@ -67,7 +62,6 @@
         <h4>Management Interface</h4>
         <p>Web-based dashboard for node registration, job monitoring, restoration, and audit log review.</p>
       </div>
-
       <h2 class="section-head">Data Flow</h2>
       <div class="hero-panel" style="margin-bottom: 8px;">
         <div class="status-row"><span class="tag steel">[01]</span> Tactical network devices (routers, switches, SATCOM terminals)</div>
@@ -77,7 +71,6 @@
         <div class="status-row"><span class="tag">[05]</span> Sync Daemon pushes to cloud (JWCC) when bandwidth allows</div>
         <div class="status-row"><span class="tag amber">[06]</span> Operator restores via Management Interface in one click</div>
       </div>
-
       <h2 class="section-head">Technical Specifications</h2>
       <table class="spec">
         <tr><th>Component</th><th>Specification</th></tr>
@@ -91,7 +84,6 @@
         <tr><td class="label">Operating System</td><td class="value">Ubuntu Server 22.04 LTS or RHEL 9 (STIG-hardened), kernel 5.15+</td></tr>
         <tr><td class="label">Container Runtime</td><td class="value">Docker Engine 24.x or newer</td></tr>
       </table>
-
       <h3 class="sub-head">Supported Network Systems</h3>
       <ul class="plain">
         <li>Cisco (IOS, IOS-XE, NX-OS)</li>
@@ -99,15 +91,13 @@
         <li>Palo Alto (PAN-OS)</li>
         <li>SATCOM / RF gear &mdash; any generic SSH/SNMP-capable terminal</li>
       </ul>
-
       <footer class="sitefoot">
-        <span>NetVault-Tactical &copy; 2026 &mdash; Prototype Build NVT-1.0</span>
+        <span>NetVault-Tactical &copy; 2026</span>
         <span>UNCLASSIFIED // FOR OFFICIAL USE ONLY</span>
       </footer>
     </div>
   </main>
 </div>
-
 <script src="assets/site.js"></script>
 </body>
 </html>
