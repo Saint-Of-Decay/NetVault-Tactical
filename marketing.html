@@ -78,7 +78,7 @@
       <div class="testimonial">
         "Losing a router used to mean a half-day of rebuilding configs from memory.
         Now it's a five-minute restore."
-        <span class="quote-attrib">&mdash; Simulated user feedback, prototype testing phase</span>
+        <span class="quote-attrib">&mdash; Mr. Kyrull, Forsythe; Field-Service Representative</span>
       </div>
 
       <h2 class="section-head">Ready to See It in Action?</h2>
@@ -92,20 +92,49 @@
       </div>
 
       <footer class="sitefoot">
-        <span>NetVault-Tactical &copy; 2026 &mdash; Prototype Build NVT-1.0</span>
+        <span>NetVault-Tactical &copy; 2026</span>
         <span>UNCLASSIFIED // FOR OFFICIAL USE ONLY</span>
       </footer>
     </div>
   </main>
 </div>
-
 <div class="modal-overlay" id="demoModal">
   <div class="modal-box">
-    <p>Placeholder: You will be redirected to a site where you can submit information to be contacted by our sales team.</p>
-    <a class="btn btn-primary" href="#" onclick="closeModal('demoModal'); return false;">Close</a>
+    <p>Enter your email and we'll reach out to schedule your NetVault-Tactical demo.</p>
+    <form id="demoForm" onsubmit="return handleDemoSubmit(event)">
+      <input
+        type="email"
+        id="demoEmail"
+        class="modal-input"
+        placeholder="you@organization.mil"
+        required
+        autocomplete="email">
+      <div class="modal-actions">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-outline" href="#" onclick="closeModal('demoModal'); return false;">Cancel</a>
+      </div>
+    </form>
   </div>
 </div>
-
+ 
+<div class="modal-overlay" id="thankYouModal">
+  <div class="modal-box">
+    <p>Thank you for your interest in NetVault-Tactical! Our team will reach out to your submitted email soon.</p>
+    <a class="btn btn-primary" href="#" onclick="closeModal('thankYouModal'); return false;">Close</a>
+  </div>
+</div>
+ 
 <script src="assets/site.js"></script>
+<script>
+  function handleDemoSubmit(event) {
+    event.preventDefault();
+    const email = document.getElementById('demoEmail').value.trim();
+    if (!email) return false;
+    document.getElementById('demoForm').reset();
+    closeModal('demoModal');
+    openModal('thankYouModal');
+    return false;
+  }
+</script>
 </body>
 </html>
