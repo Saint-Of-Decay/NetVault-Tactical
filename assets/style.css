@@ -467,3 +467,27 @@ footer.sitefoot {
   flex-wrap: wrap;
   gap: 8px;
 }
+.modal-input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 15px;
+  padding: 12px 14px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+.modal-input::placeholder { color: var(--muted); }
+.modal-input:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-color: var(--amber);
+}
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.modal-actions .btn { border: none; font-family: var(--sans); }
+.modal-actions .btn-outline { border: 1px solid var(--steel); }
